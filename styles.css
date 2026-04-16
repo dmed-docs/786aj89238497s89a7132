@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #ffffff;
+    color: #334155;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    /* padding: 0 20px 20px; */
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+}
+.container_logo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-bottom: 40px;
+}
+
+.logo {
+
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 80px;
+    width: 400px;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid #e2e8f0;
+    position: relative;
+}
+
+.language-selector:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.chevron {
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.flag-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+
+.language-text {
+    font-size: 14px;
+    color: #334155;
+    font-weight: 500;
+    display: inline;
+}
+
+/* Main Content */
+.main-content {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #1e293b;
+    padding-bottom: 40px;
+    line-height: 1.3;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.pin-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.pin-inputs {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.pin-input {
+    width: 35px;
+    height: 40px;
+    border: 1px solid rgba(224, 222, 222, 0.897);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: #1e293b;
+    background: white;
+    transition: all 0.2s;
+    outline: none;
+}
+
+.pin-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.pin-input:not(:placeholder-shown) {
+    border-color: rgb(199, 199, 199);
+    background-color: #fff;
+}
+
+.open-btn {
+    padding: 10px 100px;
+    background: rgba(245, 245, 245);
+    color: #94a3b8;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    border: 1px solid rgba(214, 214, 214);
+    font-weight: 400;
+    cursor: not-allowed;
+    transition: all 0.3s;
+}
+
+.open-btn:not(:disabled) {
+    background: rgba(245, 245, 245);
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/* Help Section */
+.help-section {
+    margin-top: 100px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    
+}
+
+.help-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #F1F1F1;
+    border-radius: 8px;
+}
+
+.help-image {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.help-text {
+    color: #64748b;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 25px;
+        
+    }
+    .container_logo {
+        padding: 0px 20px;
+    }
+   
+
+    .header {
+        /* padding: 16px 0; */
+        margin-bottom: 32px;
+    }
+
+    .logo-image {
+        height: 40px;
+        width: 150px;
+    }
+
+    .title {
+        font-size: 20px;
+        /* margin-bottom: 32px; */
+        font-weight: 700;
+        width: 100%;
+    }
+
+    .pin-inputs {
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .pin-input {
+        width: 35px;
+        height: 40px;
+        font-size: 22px;
+        border-radius: 8px;
+        border: 1.5px solid #e2e8f0;
+        background-color: #ffffff;
+    }
+
+    .pin-form {
+        gap: 24px;
+    }
+
+    .open-btn {
+        padding: 15px;
+        width: 100%;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+
+    .help-section {
+        padding-top: 32px;
+    }
+
+    .help-image {
+        max-width: 100%;
+        border-radius: 16px;
+    }
+
+    .main-content {
+        margin-bottom: 0;
+    }
+
+    /* Mobile: til tugmasi katta doira, faqat bayroq */
+    .language-selector {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        padding: 0;
+        justify-content: center;
+        /* box-shadow: 0 1px 4px rgba(0,0,0,0.12); */
+    }
+
+    .flag-icon svg {
+        width: 28px;
+        height: 21px;
+    }
+
+    .language-text,
+    .chevron {
+        display: none;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container > * {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.pin-input {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.pin-input:nth-child(1) { animation-delay: 0.1s; }
+.pin-input:nth-child(2) { animation-delay: 0.2s; }
+.pin-input:nth-child(3) { animation-delay: 0.3s; }
+.pin-input:nth-child(4) { animation-delay: 0.4s; }
